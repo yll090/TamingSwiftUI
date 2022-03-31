@@ -12,6 +12,8 @@ struct LoginView: View {
     @StateObject var viewModel: LoginViewModel = LoginViewModel()
     @AppStorage("logged_in") var loggedIn: Bool = false
     
+    @EnvironmentObject var navigation: Navigation
+    
     var inputFields: some View {
         VStack(spacing: 10) {
             TextField("Username", text: $viewModel.username)
@@ -42,6 +44,7 @@ struct LoginView: View {
                 
                 Button(action: {
                     viewModel.login()
+                    navigation.navigateTo(.DASHBOARD)
                 }) {
                     Text("Login")
                         .frame(maxWidth:.infinity,maxHeight: 50)
@@ -52,8 +55,6 @@ struct LoginView: View {
             }
             .padding()
         }
-        .navigationBarHidden(true)
-        .navigationBarBackButtonHidden(true)
     }
 }
 

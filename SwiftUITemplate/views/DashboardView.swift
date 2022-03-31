@@ -10,12 +10,14 @@ import SwiftUI
 struct DashboardView: View {
     @StateObject var viewModel: DashboardViewModel = DashboardViewModel()
     @State var shouldNavigateToDetails = false
+    @EnvironmentObject var navigation: Navigation
     var body: some View {
         TabView {
             NavigationView {
                 VStack {
                     Button(action: {
                         viewModel.logout()
+                        navigation.navigateTo(.LOGIN)
                     }) {
                         Text("Logout")
                     }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CA34C4327E627830015FA18 /* NavigationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA34C4227E627830015FA18 /* NavigationWrapper.swift */; };
+		8CA34C4627E627A90015FA18 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA34C4527E627A90015FA18 /* Navigation.swift */; };
 		8CD266F727B94D5500359812 /* SwiftUITemplateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD266F627B94D5500359812 /* SwiftUITemplateApp.swift */; };
 		8CD266F927B94D5500359812 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD266F827B94D5500359812 /* ContentView.swift */; };
 		8CD266FB27B94D5700359812 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CD266FA27B94D5700359812 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8CA34C4227E627830015FA18 /* NavigationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationWrapper.swift; sourceTree = "<group>"; };
+		8CA34C4527E627A90015FA18 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		8CD266F327B94D5500359812 /* SwiftUITemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD266F627B94D5500359812 /* SwiftUITemplateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITemplateApp.swift; sourceTree = "<group>"; };
 		8CD266F827B94D5500359812 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +44,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CA34C4427E6279C0015FA18 /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				8CA34C4227E627830015FA18 /* NavigationWrapper.swift */,
+				8CA34C4527E627A90015FA18 /* Navigation.swift */,
+			);
+			path = navigation;
+			sourceTree = "<group>";
+		};
 		8CD266EA27B94D5500359812 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +72,7 @@
 		8CD266F527B94D5500359812 /* SwiftUITemplate */ = {
 			isa = PBXGroup;
 			children = (
+				8CA34C4427E6279C0015FA18 /* navigation */,
 				8CD2670A27B94FC000359812 /* viewModels */,
 				8CD2670927B94F9100359812 /* views */,
 				8CD266F627B94D5500359812 /* SwiftUITemplateApp.swift */,
@@ -166,7 +180,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CD2670827B94E9900359812 /* DashboardView.swift in Sources */,
+				8CA34C4327E627830015FA18 /* NavigationWrapper.swift in Sources */,
 				8CD2670C27B94FCB00359812 /* DashboardViewModel.swift in Sources */,
+				8CA34C4627E627A90015FA18 /* Navigation.swift in Sources */,
 				8CD2670E27B94FD600359812 /* LoginViewModel.swift in Sources */,
 				8CD266F927B94D5500359812 /* ContentView.swift in Sources */,
 				8CD266F727B94D5500359812 /* SwiftUITemplateApp.swift in Sources */,
