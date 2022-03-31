@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct SwiftUITemplateApp: App {
+    @AppStorage("logged_in") var loggedIn: Bool = false
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            if (loggedIn) {
+                DashboardView()
+            } else {
+                LoginView()
+            }
         }
     }
 }
+

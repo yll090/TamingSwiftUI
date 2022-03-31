@@ -12,19 +12,20 @@ struct DashboardView: View {
     @State var shouldNavigateToDetails = false
     var body: some View {
         TabView {
-            VStack {
-                Button(action: {
-                    viewModel.logout()
-                }) {
-                    Text("Logout")
+            NavigationView {
+                VStack {
+                    Button(action: {
+                        viewModel.logout()
+                    }) {
+                        Text("Logout")
+                    }
+                    Button(action: {
+                        shouldNavigateToDetails = true
+                    }) {
+                        Text("Open details")
+                    }
+                    NavigationLink("", destination: Text("Next screen"), isActive: $shouldNavigateToDetails)
                 }
-                Button(action: {
-                    shouldNavigateToDetails = true
-                }) {
-                    Text("Open details")
-                }
-                NavigationLink("", destination: Text("Next screen"), isActive: $shouldNavigateToDetails)
-                NavigationLink("", destination: LoginView(), isActive: $viewModel.navigateToLogin)
             }
             .navigationBarBackButtonHidden(true)
                 .tabItem {

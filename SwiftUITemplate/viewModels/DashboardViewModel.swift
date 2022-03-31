@@ -11,10 +11,8 @@ import SwiftUI
 class DashboardViewModel: ObservableObject {
     
     @AppStorage("logged_in") var loggedIn: Bool = false
-    @Published var navigateToLogin: Bool = false
     
     func logout() {
         self.loggedIn = false
-        self.navigateToLogin = true
     }
 }

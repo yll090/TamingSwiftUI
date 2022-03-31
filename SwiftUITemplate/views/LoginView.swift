@@ -49,18 +49,11 @@ struct LoginView: View {
                         .background((Color.blue).cornerRadius(30))
                 }
                 .padding(.top, 10)
-                
-                NavigationLink("", destination: DashboardView(), isActive: $viewModel.shouldNavigateToDashboard)
             }
             .padding()
         }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
-        .onAppear {
-            if (loggedIn) {
-                viewModel.navigateToDashboard()
-            }
-        }
     }
 }
 
